@@ -1,97 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a ItaPets! Envie suas dúvidas, comentários ou sugestões através do nosso formulário.">
-    <meta name="keywords" content="contato, itapets, email, telefone, formulário, pet shop">
-    
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contato com a ItaPets! Envie suas dúvidas, comentários ou sugestões através do nosso formulário."
+    />
+    <meta
+      name="keywords"
+      content="contato, itapets, email, telefone, formulário, pet shop"
+    />
+
     <title>Contato - ItaPets</title>
-    
-    <link rel="stylesheet" href="css/style.css">
 
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>ItaPets - Tudo para o seu Pet</h1>
-        <nav>
-            <a href="index.html">Início</a> | 
-            <a href="contato.html">Contato</a>
-        </nav>
+      <h1>ItaPets - Tudo para o seu Pet</h1>
+      <nav>
+        <a href="index.html">Início</a> |
+        <a href="contato.html">Contato</a>
+      </nav>
     </header>
-    
-    <hr>
-    
+
+    <hr />
+
     <main>
-        <section>
-            <h2>Entre em Contato</h2>
-            <p>Envie seus comentários e sugestões sobre nosso site!</p>
-            
-            <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
-                
-                <div>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                
-                <div>
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div>
-                    <label for="telefone">Telefone:</label><br>
-                    <input type="tel" id="telefone" name="telefone">
-                </div>
+      <section>
+        <h2>Entre em Contato</h2>
+        <p>Envie seus comentários e sugestões sobre nosso site!</p>
 
-                <div>
-                    <strong>Qual seu tipo de pet?</strong><br>
-                    <input type="radio" id="pet_cao" name="tipo_pet" value="cao">
-                    <label for="pet_cao">Cachorro</label><br>
-                    <input type="radio" id="pet_gato" name="tipo_pet" value="gato">
-                    <label for="pet_gato">Gato</label><br>
-                    <input type="radio" id="pet_outro" name="tipo_pet" value="outro">
-                    <label for="pet_outro">Outro</label><br>
-                </div>
+        <form
+          action="mailto:seuemail@exemplo.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div>
+            <label for="nome">Nome:</label><br />
+            <input type="text" id="nome" name="nome" required />
+          </div>
 
-                <div>
-                    <label for="qtd_pets">Quantos pets você tem?</label><br>
-                    <input type="number" id="qtd_pets" name="qtd_pets" min="1" max="20" value="1">
-                </div>
+          <div>
+            <label for="email">E-mail:</label><br />
+            <input type="email" id="email" name="email" required />
+          </div>
 
-                <div>
-                    <strong>Quais produtos você tem mais interesse?</strong><br>
-                    <input type="checkbox" id="interesse_racao" name="interesse_racao" value="sim">
-                    <label for="interesse_racao">Rações e Petiscos</label><br>
-                    <input type="checkbox" id="interesse_brinquedos" name="interesse_brinquedos" value="sim">
-                    <label for="interesse_brinquedos">Brinquedos e Acessórios</label><br>
-                    <input type="checkbox" id="interesse_higiene" name="interesse_higiene" value="sim">
-                    <label for="interesse_higiene">Higiene e Beleza</label><br>
-                </div>
+          <div>
+            <label for="telefone">Telefone:</label><br />
+            <input type="tel" id="telefone" name="telefone" />
+          </div>
 
-                <div>
-                    <label for="melhor_data">Qual a melhor data para entrarmos em contato?</label><br>
-                    <input type="date" id="melhor_data" name="melhor_data">
-                </div>
-                
-                <div>
-                    <label for="comentarios">Comentários:</label><br>
-                    <textarea id="comentarios" name="comentarios" rows="6" cols="50" required></textarea>
-                </div>
-                
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
-        </section>
+          <div>
+            <strong>Qual seu tipo de pet?</strong><br />
+            <input type="radio" id="pet_cao" name="tipo_pet" value="cao" />
+            <label for="pet_cao">Cachorro</label><br />
+            <input type="radio" id="pet_gato" name="tipo_pet" value="gato" />
+            <label for="pet_gato">Gato</label><br />
+            <input type="radio" id="pet_outro" name="tipo_pet" value="outro" />
+            <label for="pet_outro">Outro</label><br />
+          </div>
+
+          <div>
+            <label for="qtd_pets">Quantos pets você tem?</label><br />
+            <input
+              type="number"
+              id="qtd_pets"
+              name="qtd_pets"
+              min="1"
+              max="20"
+              value="1"
+            />
+          </div>
+
+          <div>
+            <strong>Quais produtos você tem mais interesse?</strong><br />
+            <input
+              type="checkbox"
+              id="interesse_racao"
+              name="interesse_racao"
+              value="sim"
+            />
+            <label for="interesse_racao">Rações e Petiscos</label><br />
+            <input
+              type="checkbox"
+              id="interesse_brinquedos"
+              name="interesse_brinquedos"
+              value="sim"
+            />
+            <label for="interesse_brinquedos">Brinquedos e Acessórios</label
+            ><br />
+            <input
+              type="checkbox"
+              id="interesse_higiene"
+              name="interesse_higiene"
+              value="sim"
+            />
+            <label for="interesse_higiene">Higiene e Beleza</label><br />
+          </div>
+
+          <div>
+            <label for="melhor_data"
+              >Qual a melhor data para entrarmos em contato?</label
+            ><br />
+            <input type="date" id="melhor_data" name="melhor_data" />
+          </div>
+
+          <div>
+            <label for="comentarios">Comentários:</label><br />
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="6"
+              cols="50"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
     </main>
-    
-    <hr>
-    
+
+    <hr />
+
     <footer>
-        <p><a href="index.html">Voltar para a página inicial</a></p>
-        <p>ItaPets - Todos os direitos reservados</p>
+      <p><a href="index.html">Voltar para a página inicial</a></p>
+      <p>ItaPets - Todos os direitos reservados</p>
     </footer>
-</body>
+  </body>
 </html>
