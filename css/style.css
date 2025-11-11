@@ -25,9 +25,9 @@ footer {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 25px;
 }
 
 h1,
@@ -90,14 +90,14 @@ header nav a {
 }
 
 .product-grid {
-  flex: 2;
   min-width: 300px;
 }
 
 .product-grid-items {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .product-grid article {
@@ -109,18 +109,22 @@ header nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  flex-basis: 22%;
+  min-width: 200px;
 }
 
 .product-grid article img {
-  width: 100%;
-  height: auto;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
   border-radius: 5px;
   margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sidebar {
-  flex: 1;
-  min-width: 250px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -128,18 +132,17 @@ header nav a {
   height: fit-content;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.sidebar p {
+  margin-bottom: 0;
 }
-
-.sidebar li {
+.sidebar p a {
+  display: block;
   padding: 8px 0;
   border-bottom: 1px dashed #ccc;
 }
-
-.sidebar li a:hover {
+.sidebar p a:hover {
   color: #2c3e50;
+  text-decoration: none;
 }
 
 .product-detail img {
@@ -184,6 +187,7 @@ textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -221,18 +225,35 @@ footer {
   }
 
   main {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid article {
+    flex-basis: 100%;
+    max-width: 350px;
+  }
+
+  form label,
+  form strong {
+    font-size: 0.9em;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  textarea {
+    padding: 10px;
+    font-size: 1em;
+  }
+  input[type="submit"] {
+    padding: 10px 15px;
+    width: 100%;
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .product-grid-items {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .product-grid-items {
-    grid-template-columns: repeat(4, 1fr);
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .product-grid article {
+    flex-basis: 45%;
   }
 }
